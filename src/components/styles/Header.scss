@@ -1,0 +1,74 @@
+@import "./colors";
+@import "./mixins";
+@import "./font";
+
+.header {
+    font-family: $font-Kanit;
+    position: sticky;
+    top: 0;
+
+    nav {
+        @include flex-center;
+        justify-content: space-around;
+        height: 4rem;
+        background-color: $main-color;
+
+        .ul-items {
+            list-style: none;
+
+            .li-items {
+                a {
+                    text-decoration: none;
+                    color: $secondary-color;
+                    margin: 0 1rem;
+                    font-size: 14px;
+                }
+                .orange {
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: $font-Kanit;
+    }
+    .right {
+        @include flex-center;
+        .search {
+            @include flex-center;
+            margin-right: 5rem;
+
+            .search-icon {
+                color: $grey-color;
+                font-size: 15px;
+            }
+        }
+        .sch-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .right-button {
+        @include flex-center;
+        margin-right: 1rem;
+
+        button {
+            margin: 0 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: $grey-color;
+            }
+        }
+        .basket {
+            color: $basket-color;
+        }
+    }
+}

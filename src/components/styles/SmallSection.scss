@@ -1,0 +1,35 @@
+@import "./colors";
+@import "./mixins";
+@import "./font";
+
+.second-section {
+    font-family: $font-Kanit;
+    background-color: $main-color;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+
+    .all-cards {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4, 350px);
+        gap: 2rem;
+
+        .card {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+
+            h1 {
+                margin-bottom: 2rem;
+            }
+
+            img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+    }
+}

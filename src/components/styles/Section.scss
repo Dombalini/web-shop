@@ -1,0 +1,41 @@
+@import "./colors";
+@import "./buttons";
+@import "./font";
+
+.main-section {
+    background: linear-gradient(
+            to right bottom,
+            rgba(252, 104, 18, 0.507),
+            rgba(252, 96, 69, 0.363)
+        ),
+        url(../../assets/main.jpg);
+    height: 80vh;
+    overflow: hidden;
+    background-size: cover;
+
+    .content {
+        margin: 12rem;
+        text-align: center;
+        h1 {
+            font-size: 4rem;
+            color: $main-color;
+            text-shadow: 2px 2px 2px$main-color;
+            font-family: $font-Kanit;
+        }
+        button {
+            @include button;
+        }
+        button:hover {
+            @include hover;
+        }
+    }
+    .bottom-text {
+        margin-left: 1rem;
+        p {
+            position: relative;
+            top: 10vh;
+            font-size: 20px;
+            color: $main-color;
+        }
+    }
+}
